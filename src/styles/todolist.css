@@ -8,8 +8,8 @@
 }
 
 .todo-list li {
-    margin-top: 2.6rem;
     list-style: none;
+    flex: 1;
 }
 
 .todo-list h1 {

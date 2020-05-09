@@ -1,4 +1,75 @@
 .completed {
-    color: lightslategray;
+    opacity: 0.6;
     text-decoration: line-through;
+}
+
+.todo-task {
+    position: relative;
+    margin-right: 1rem;
+}
+
+.todo {
+    display: flex;
+    margin: 1rem 1rem 4px;
+    padding: 1.1rem 3rem;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.todo-buttons {
+    flex-shrink: 0;
+    padding-left: 0.7em;
+}
+
+.todo-buttons button {
+    border: none;
+    font-size: 1em;
+    margin: 0.4em;
+    cursor: pointer;
+    background: none;
+    color: #fefefe;
+}
+
+.todo-edit-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.todo-edit-form label {
+    min-width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.todo-edit-form input {
+    flex-grow: 1;
+    border: none;
+    background: #f7f1f1;
+    padding: 0 1.5rem;
+    font-size: initial;
+}
+
+.todo-edit-form button {
+    padding: 0 1.3rem;
+    border: none;
+    background: #ff6666;
+    color: #fefefe;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.todo-edit-form button:hover {
+    background-color: #ff5e5e;
+}
+
+.todo-edit-form input,
+.todo-edit-form button {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    height: 3rem;
 }

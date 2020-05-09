@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./styles/todo.css";
+import { FaPenAlt, FaTrash } from "react-icons/fa";
 
 class Todo extends Component {
 	constructor(props) {
@@ -44,8 +45,8 @@ class Todo extends Component {
 		let result;
 		if (this.state.isEditing) {
 			result = (
-				<div>
-					<form onSubmit={this.handleUpdate}>
+				<div className='todo'>
+					<form onSubmit={this.handleUpdate} className='todo-edit-form'>
 						<input
 							type='text'
 							value={this.state.task}
@@ -58,15 +59,25 @@ class Todo extends Component {
 			);
 		} else {
 			result = (
-				<div>
-					<button onClick={this.toggleForm}>Edit</button>
-					<button onClick={this.handleRemove}>x</button>
+				<div className='todo'>
 					<li
-						className={this.props.completed ? "completed" : "incomplete"}
+						className={
+							this.props.completed
+								? "todo-task completed"
+								: "todo-task incomplete"
+						}
 						onClick={this.handleToggle}
 					>
 						{this.props.task}
 					</li>
+					<div className='todo-buttons'>
+						<button onClick={this.toggleForm}>
+							<FaPenAlt />
+						</button>
+						<button onClick={this.handleRemove}>
+							<FaTrash />
+						</button>
+					</div>
 				</div>
 			);
 		}
